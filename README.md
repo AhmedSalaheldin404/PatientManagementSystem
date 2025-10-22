@@ -22,11 +22,3 @@ This is a fully functional Patient Management System web application developed u
 - Razor Pages
 
 ---
-
-## 🚀 Getting Started
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/nisung-kerung/PatientManagementSystem.git
-cd PatientManagementSystem
