@@ -1,0 +1,51 @@
+@model PatientManagementSystem.Models.Patient
+
+@{
+    ViewData["Title"] = "Edit Patient";
+}
+
+<h2>Edit Patient</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" />
+
+    <div>
+        <label asp-for="OwnerName"></label>
+        <input asp-for="OwnerName" />
+    </div>
+
+    <div>
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" />
+    </div>
+
+    <div>
+        <label asp-for="PetName"></label>
+        <input asp-for="PetName" />
+    </div>
+
+    <div>
+        <label asp-for="Species"></label>
+        <input asp-for="Species" />
+    </div>
+
+    <div>
+        <label asp-for="Sex"></label>
+        <select asp-for="Sex">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div>
+        <label asp-for="Diagnosis"></label>
+        <input asp-for="Diagnosis" />
+    </div>
+
+    <div>
+        <label asp-for="Details"></label>
+        <textarea asp-for="Details"></textarea>
+    </div>
+
+    <button type="submit">Update</button>
+</form>

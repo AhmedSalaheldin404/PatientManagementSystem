@@ -1,0 +1,47 @@
+﻿@model List<PatientManagementSystem.Models.Patient>
+
+<h2>Patient List</h2>
+
+<!-- فورم البحث -->
+<form asp-action="Index" method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="searchString" class="form-control" placeholder="Search by Owner's Name" value="@Context.Request.Query["searchString"]" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </div>
+</form>
+
+<a href="/Patient/Create" class="btn btn-success mb-3">Add New</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Owner's Name</th>
+            <th>Phone</th>
+            <th>Pet's Name</th>
+            <th>Species</th>
+            <th>Sex</th>
+            <th>Diagnosis</th>
+            <th>Details</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var p in Model)
+        {
+            <tr>
+                <td>@p.OwnerName</td>
+                <td>@p.Phone</td>
+                <td>@p.PetName</td>
+                <td>@p.Species</td>
+                <td>@p.Sex</td>
+                <td>@p.Diagnosis</td>
+                <td>@p.Details</td>
+                <td>
+                    <a href="/Patient/Details/@p.Id">View</a> |
+                    <a href="/Patient/Edit/@p.Id">Edit</a> |
+                    <a href="/Patient/Delete/@p.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

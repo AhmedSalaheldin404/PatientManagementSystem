@@ -1,0 +1,13 @@
+@model PatientManagementSystem.Models.Patient
+
+<h2>Patient Details</h2>
+<p><strong>Owner's Name:</strong> @Model.OwnerName</p>
+<p><strong>Phone:</strong> @Model.Phone</p>
+<p><strong>Pet's Name:</strong> @Model.PetName</p>
+<p><strong>Species:</strong> @Model.Species</p>
+<p><strong>Sex:</strong> @Model.Sex</p>
+<p><strong>Diagnosis:</strong> @Model.Diagnosis</p>
+<p><strong>Details:</strong> @Model.Details</p>
+
+<a href="/Patient/Edit/@Model.Id">Edit</a> |
+<a href="/Patient/Delete/@Model.Id">Delete</a>

@@ -1,0 +1,11 @@
+@model PatientManagementSystem.Models.Patient
+
+<h2>Delete Confirmation</h2>
+<p>Are you sure you want to delete record for <strong>@Model.PetName</strong> owned by <strong>@Model.OwnerName</strong>?</p>
+
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit">Yes, delete</button>
+    <a href="/Patient/Index">Cancel</a>
+</form>
